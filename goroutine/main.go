@@ -11,7 +11,7 @@ import (
 const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
 
-func makeString(length int, charset string) string {
+func makeString(length int, charset string) string { // 랜덤문장배열
     b := make([]byte,length)
     for i := range b {
         b[i] = charset[seededRand.Intn(len(charset))]
